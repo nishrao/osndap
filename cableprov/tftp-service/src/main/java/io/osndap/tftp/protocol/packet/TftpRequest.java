@@ -12,5 +12,5 @@ import java.util.List;
 public abstract class TftpRequest extends TftpPacket{
     private String fileName;
     private TftpMode mode;
-    private List<TftpOptionExtention> tftpOptions = new ArrayList<TftpOptionExtention>();
+    private List<TftpOptionExtension> tftpOptions = new ArrayList<>();
 }
