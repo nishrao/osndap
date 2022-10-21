@@ -1,4 +1,9 @@
 package io.osndap.tftp.protocol.packet;
 
-public class TftpOptionExtension {
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter
+public abstract class TftpOptionExtension {
+       private TftpOptionType opType;
 }

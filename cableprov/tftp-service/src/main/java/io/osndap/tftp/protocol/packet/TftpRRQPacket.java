@@ -1,6 +1,6 @@
 package io.osndap.tftp.protocol.packet;
 
-public class TftpRRQPacket extends TftpRequest{
+public class TftpRRQPacket extends TftpRequestPacket {
 
     @Override
     public TftpOpCode getOpCode() {
