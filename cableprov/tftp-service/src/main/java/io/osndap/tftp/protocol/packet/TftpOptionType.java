@@ -7,7 +7,7 @@ import lombok.ToString;
 @Getter
 @ToString
 public enum TftpOptionType {
-    blksize, timeout,tsize;
+    blksize, timeout, tsize;
 
     @NonNull
     public static TftpOptionType forOpType(@NonNull String opType) {

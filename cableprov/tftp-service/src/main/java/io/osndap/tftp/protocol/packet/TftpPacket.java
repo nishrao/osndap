@@ -3,6 +3,7 @@ package io.osndap.tftp.protocol.packet;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 
 import java.net.SocketAddress;
 import java.nio.ByteBuffer;
@@ -10,6 +11,7 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 @Getter @Setter
+@Slf4j
 public abstract class TftpPacket {
     public static final Charset CHARSET = StandardCharsets.ISO_8859_1;
 
@@ -37,6 +39,7 @@ public abstract class TftpPacket {
         byte[] bytes = new byte[end - start];
         buffer.get(bytes);
         buffer.position(finish); //Move the pointer to next block
+        log.info(new String(bytes, CHARSET));
         return new String(bytes, CHARSET);
     }
 
